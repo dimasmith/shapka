@@ -16,7 +16,7 @@
       <h2>{{ .Title }}</h2>
       {{ .Content }}
       <ul>
-      {{ range (where site.RegularPages "Type" "in" "sharks") }}
+      {{ range (where site.RegularPages "Type" "in" "places") }}
         <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
       {{ end }}
       </ul>
