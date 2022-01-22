@@ -1,0 +1,11 @@
+{{ define "main" }}
+    <section class="announces">
+    {{ range .Paginator.Pages }}
+        <article class="announce">
+            <h1 class="annouce__title">{{ .Title }}</h1>
+            <p class="announce__summary">{{ .Summary }}</p>
+            <a href="{{ .Permalink }}" class="announce__link">Читати</a>
+        </article>
+    {{ end }}
+    </section>
+{{ end }}

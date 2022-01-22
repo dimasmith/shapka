@@ -1,3 +1,6 @@
 baseURL = ''
-languageCode = 'en-us'
-title = 'Shapka'
+title = 'Мама, я в шапці!'
+theme = 'shapka'
+
+languageCode = 'uk-UA'
+defaultContentLanguage = 'uk'
