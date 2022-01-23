@@ -3,6 +3,7 @@
     {{ range .Paginator.Pages }}
         <article class="announce">
             <h1 class="annouce__title">{{ .Title }}</h1>
+            <time class="announce__publication-date">{{ time.Format "2006-01-02" .Date }}</time>
             <p class="announce__summary">{{ .Summary }}</p>
             <a href="{{ .Permalink }}" class="announce__link">Читати</a>
         </article>

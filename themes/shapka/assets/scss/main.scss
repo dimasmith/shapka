@@ -1,3 +1,71 @@
 html, body {
     margin: 0;
+    min-height: 100%;
+}
+
+
+// layout
+$gap: 16px;
+
+.layout {
+    margin: 0 auto;
+    display: grid;
+
+    grid-template-columns: 2*$gap 1fr 2*$gap;
+    grid-template-rows: auto 1fr 4*$gap;
+    grid-template-areas: 
+        "header header header"
+        ". main ."
+        ". footer .";
+    column-gap: $gap;   
+    row-gap: $gap;
+
+    max-width: 1024px;
+}
+
+.layout-header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+}
+
+.layout-main {
+    grid-area: main;
+}
+
+.layout-footer {
+    grid-area: footer;
+}
+
+// typography
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Merriweather:ital,wght@0,300;0,400;1,300&display=swap');
+
+body {
+    font-family: 'Merriweather', serif;
+}
+
+// components
+.hero {
+    height: 24*$gap;
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    padding: 3*$gap;
+
+    &__title {
+        margin: 0;
+        font-size: 82px;
+        font-family: 'Caveat', cursive;
+        text-decoration: none;
+        text-align: right;
+        color: #333;
+    }
+}
+
+.copyright {
+    text-align: center;
 }
