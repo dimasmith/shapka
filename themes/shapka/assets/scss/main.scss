@@ -47,8 +47,35 @@ body {
     background-position: center;
 }
 
+.announces {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    row-gap: $gap*2;
+
+    @include md {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: $gap;
+    }
+
+    @include lg {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: $gap;
+    }
+}
+
 .announce {
-    margin-bottom: 2em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: $gap * 16 auto 1fr;
+    grid-template-areas:
+        "thumbnail"
+        "heading";
+
+    &__header {
+        grid-area: heading;
+        padding-top: $gap;
+    }
 
     &__title {
         margin-top: 0;
@@ -56,7 +83,7 @@ body {
     }
 
     &__thumbnail {
-        height: $gap * 12;
+        grid-area: thumbnail;
     }
 
     &__link {
@@ -68,6 +95,12 @@ body {
         color: $color-dark-grey;
         font-weight: bold;
     }
+
+    &__summary {
+        color: $color-dark-grey;
+        font-style: italic;
+    }
+
 }
 
 .icon-link {
