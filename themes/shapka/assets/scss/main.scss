@@ -22,7 +22,7 @@ body {
     background-color: $color-dark;
 }
 
-.top-bar-logo {
+.logo {
     padding: $gap;
 
     &__link {
@@ -38,10 +38,13 @@ body {
 
     &__image {
         height: $gap * 24;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
     }
+}
+
+.bg-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .announce {
@@ -54,8 +57,6 @@ body {
 
     &__thumbnail {
         height: $gap * 12;
-        background-position: center;
-        background-size: cover;
     }
 
     &__link {

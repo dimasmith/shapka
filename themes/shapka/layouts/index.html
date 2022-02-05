@@ -5,7 +5,7 @@
             {{ if (isset .Params "thumbnail") }}
                 {{ $thumbnail := .Params.thumbnail }}
                 {{ range .Resources.Match $thumbnail }}
-                    <div class="announce__thumbnail" style="background-image: url('{{ .Permalink }}')">
+                    <div class="bg-image announce__thumbnail" style="background-image: url('{{ .Permalink }}')">
 
                     </div>
                 {{ else }}
@@ -13,7 +13,7 @@
                 {{ end }}
             {{ else }}
                 {{ $thumbnail := resources.Get "images/default-thumbnail.jpg" }}
-                <div class="announce__thumbnail" style="background-image: url('{{ $thumbnail.Permalink }}')">
+                <div class="bg-image announce__thumbnail" style="background-image: url('{{ $thumbnail.Permalink }}')">
 
                 </div>
             {{ end}}
