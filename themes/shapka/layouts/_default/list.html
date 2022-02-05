@@ -1,0 +1,13 @@
+{{ define "main" }}
+<section class="announces">
+    {{ range .Paginator.Pages }}
+    <article class="announce">
+        <h1 class="announce__title">
+            <a href="{{ .Permalink }}" class="announce__link">{{ .Title }}</a>
+        </h1>
+        <time class="announce__publication-date">{{ time.Format "2006-01-02" .Date }}</time>
+        <div class="announce__summary">{{ .Summary }}</div>
+    </article>
+    {{ end }}
+</section>
+{{ end }}

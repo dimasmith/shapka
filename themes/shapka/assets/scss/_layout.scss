@@ -1,0 +1,33 @@
+$gap: 16px;
+
+.layout {
+  margin: 0 auto;
+  display: grid;
+
+  grid-template-columns: $gap 1fr $gap;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+        "header header header"
+        ". main ."
+        "footer footer footer";
+  column-gap: $gap;
+  row-gap: $gap;
+
+  @include xl {
+    grid-template-columns: 1fr $screen-xl-min 1fr;
+  }
+}
+
+.layout-header {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-main {
+  grid-area: main;
+}
+
+.layout-footer {
+  grid-area: footer;
+}

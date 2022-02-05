@@ -1,40 +1,15 @@
+@import "normalize";
+@import "responsive";
+@import "colors";
+@import "layout";
+@import "typography";
+
 html, body {
     margin: 0;
     min-height: 100%;
-}
 
-
-// layout
-$gap: 16px;
-
-.layout {
-    margin: 0 auto;
-    display: grid;
-
-    grid-template-columns: 2*$gap 1fr 2*$gap;
-    grid-template-rows: auto 1fr 4*$gap;
-    grid-template-areas: 
-        "header header header"
-        ". main ."
-        ". footer .";
-    column-gap: $gap;   
-    row-gap: $gap;
-
-    max-width: 1024px;
-}
-
-.layout-header {
-    grid-area: header;
-    display: flex;
-    flex-direction: column;
-}
-
-.layout-main {
-    grid-area: main;
-}
-
-.layout-footer {
-    grid-area: footer;
+    background-color: $color-background;
+    color: $color-dark;
 }
 
 // typography
@@ -43,27 +18,103 @@ body {
 }
 
 // components
-.hero {
-    height: 24*$gap;
-    background-repeat: no-repeat;
-    background-position: 50% 100%;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+.top-bar {
+    background-color: $color-dark;
+}
 
-    padding: 3*$gap;
+.top-bar-logo {
+    padding: $gap;
+
+    &__link {
+        font-family: 'Caveat', cursive;
+        font-size: 1.6em;
+        font-weight: bolder;
+        text-decoration: none;
+        color: $color-accent;
+    }
+}
+
+.hero {
+
+    &__image {
+        height: $gap * 24;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.announce {
+    margin-bottom: 2em;
 
     &__title {
-        margin: 0;
-        font-size: 82px;
-        font-family: 'Caveat', cursive;
+        margin-top: 0;
+        font-size: 1.3em;
+    }
+
+    &__thumbnail {
+        height: $gap * 12;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &__link {
+        color: $color-controls;
         text-decoration: none;
-        text-align: right;
-        color: #333;
+    }
+
+    &__publication-date {
+        color: $color-dark-grey;
+        font-weight: bold;
+    }
+}
+
+.icon-link {
+    padding-left: $gap*1.5;
+    &--telegram {
+        background-position: left center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url("../images/telegram-icon.svg");
+    }
+}
+
+// typography
+a {
+    text-decoration: none;
+}
+
+.post {
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.footer {
+    background-color: $color-controls;
+}
+
+.footer {
+    .top-bar-logo {
+        display: none;
+    }
+}
+
+.footer-links {
+    margin: 0;
+    padding-top: $gap;
+    padding-bottom: $gap;
+    list-style: none;
+    &__link {
+        color: $color-light-gray;
     }
 }
 
 .copyright {
+    padding-top: $gap;
+    padding-bottom: $gap;
+    background-color: $color-dark;
+    color: $color-light-gray;
     text-align: center;
 }
