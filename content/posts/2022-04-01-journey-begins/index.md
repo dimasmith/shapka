@@ -17,4 +17,4 @@ thumbnail: road-begins.jpg
 Але писати на телефоні змерзлими пальцями тоді, коли максимально заощаджуєш заряд батареї вдається кепсько.
 Та й думки нерідко плутаються - на висоті думати важко.
 
-![On a way to the lighthouse](images/road-begins.jpg)
+![On a way to the lighthouse](road-begins.jpg)
