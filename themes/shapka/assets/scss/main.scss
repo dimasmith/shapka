@@ -20,6 +20,10 @@ body {
 // components
 .top-bar {
     background-color: $color-dark;
+
+    @include lg {
+        background: none;
+    }
 }
 
 .logo {

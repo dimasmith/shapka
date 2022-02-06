@@ -1,10 +1,8 @@
-{{ $heroImage := resources.Get "images/hero-image.jpg" }}
-<div class="top-bar">
-    {{ partial "logo" .}}
-</div>
-
 <div class="hero">
+    {{ $heroImage := resources.Get "images/hero-image.jpg" }}
     <div class="bg-image hero__image" style="background-image: url('{{ $heroImage.Permalink }}')">
-
+        <div class="top-bar">
+            {{ partial "logo" .}}
+        </div>
     </div>
 </div>
