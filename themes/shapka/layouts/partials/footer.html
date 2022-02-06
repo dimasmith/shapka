@@ -1,12 +1,37 @@
 <div class="footer">
-    {{ partial "logo" .}}
-    <ul class="footer-links">
-        <li>
-            <a href="https://t.me/mamayavshaptsi" class="icon-link icon-link--telegram footer-links__link">Канал шапки</a>
-        </li>
-    </ul>
-    <div class="copyright">
-        &copy; Шапка 2022
+    <div class="footer__content">
+        {{ partial "logo" . }}
+        <ul class="footer-links">
+            <li class="footer-links__header">
+                Посилання
+            </li>
+            <li class="footer-links__item">
+                <a href="https://t.me/mamayavshaptsi"
+                   class="icon-link icon-link--telegram footer-links__link">
+                    Наш Telegram
+                </a>
+            </li>
+        </ul>
+        <ul class="footer-links">
+            <li class="footer-links__header">
+                Друзі
+            </li>
+            <li class="footer-links__item">
+                <a href="https://www.facebook.com/positumpractik"
+                   class="icon-link icon-link--facebook footer-links__link">
+                    Сергій Лахоцький
+                </a>
+            </li>
+            <li class="footer-links__item">
+                <a href="https://outdoorukraine.com/ua/"
+                   class="icon-link icon-link--outdoor-ukraine footer-links__link">
+                    Outdoor Ukraine
+                </a>
+            </li>
+        </ul>
     </div>
+</div>
+<div class="copyright">
+    &copy; Шапка 2022 :)
 </div>
 

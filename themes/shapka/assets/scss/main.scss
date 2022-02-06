@@ -105,13 +105,87 @@ body {
 
 .icon-link {
     padding-left: $gap*1.5;
+    background-position: left center;
+    background-size: 1em;
+    background-repeat: no-repeat;
     &--telegram {
-        background-position: left center;
-        background-size: contain;
-        background-repeat: no-repeat;
         background-image: url("../images/telegram-icon.svg");
     }
+
+    &--facebook {
+        background-image: url("../images/facebook-icon.svg");
+    }
+
+    &--outdoor-ukraine {
+        background-image: url("../images/outdoor-ukraine-logo.png");
+    }
 }
+
+.footer {
+    background-color: $color-controls;
+    padding: $gap;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    @include md {
+        .logo {
+            display: block;
+        }
+
+        &__content {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+    }
+
+    @include lg {
+        display: grid;
+        grid-template-columns: 1fr $screen-lg-min 1fr;
+
+        &__content {
+            grid-column-start: 2;
+        }
+    }
+}
+
+.footer-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &__header {
+        color: $color-light-gray;
+        font-weight: bold;
+        font-family: 'Caveat', cursive;
+        font-size: 1.2em;
+        margin-top: $gap;
+    }
+
+    &__item {
+        padding-top: $gap;
+    }
+
+    &__link {
+        color: $color-light-gray;
+    }
+}
+
+.copyright {
+    padding-top: $gap;
+    padding-bottom: $gap;
+    background-color: $color-dark;
+    color: $color-light-gray;
+    text-align: center;
+}
+
 
 // typography
 a {
@@ -125,30 +199,3 @@ a {
     }
 }
 
-.footer {
-    background-color: $color-controls;
-}
-
-.footer {
-    .top-bar-logo {
-        display: none;
-    }
-}
-
-.footer-links {
-    margin: 0;
-    padding-top: $gap;
-    padding-bottom: $gap;
-    list-style: none;
-    &__link {
-        color: $color-light-gray;
-    }
-}
-
-.copyright {
-    padding-top: $gap;
-    padding-bottom: $gap;
-    background-color: $color-dark;
-    color: $color-light-gray;
-    text-align: center;
-}
